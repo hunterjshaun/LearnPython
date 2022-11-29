@@ -1,2 +1,2 @@
 # PythonBlueMyMind
-Repository for python projects and learning resources
+LUIT project and learning repository
