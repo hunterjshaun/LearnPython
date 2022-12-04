@@ -29,6 +29,6 @@ print(len(services))
 # Print the new list and teh new length of the list
 del services[2:4]
 print(services)
-# will return ['EC2', 'Lambda', 'IAM', 'CodeCommit'] and remove delete ['ECS', 'DynamoDB']
+# will return ['EC2', 'Lambda', 'IAM', 'CodeCommit'] and delete ['ECS', 'DynamoDB']
 print(len(services))
 # will return 4
