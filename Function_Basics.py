@@ -32,3 +32,5 @@ print(contact_card(name='Josh', age=31, car_model='kia'))
 #You can use all Positional arguments, all keyword arguments, or use positonal agurments first then use keyword arguments
 
 
+#DEFINING AND USING PYTHONG FUNCTIONS LAB
+
