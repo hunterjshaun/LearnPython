@@ -6,11 +6,10 @@ import string
 # The random module will allow us to generate random strings.
 import random
 # Here we are going to define the variable 'department' using the users input. 
-# We can use the '.lower()' function to make all of the users input lowercase. This way we can account for the various ways
+# We can use the '.lower()' function to make all of the users inputs lowercase. This way we can account for the various ways
 # a user may enter the department name.
 department = input("Good day, which department are you with? \n Accouting \n Marketing \n FinOps \n \n ").lower()
 unique_string = string.ascii_letters + string.digits
-instance_name = department + '_' + ''.join(random.choice(unique_string) for _ in range(7))
 # We can use an 'if' statement to verify an authorized department is requesting names.
 if department in ['accounting', 'finops', 'marketing']:
     instance_quantity = int(input("\n Please enter the number of instances you require: "))
