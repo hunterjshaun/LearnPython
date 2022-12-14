@@ -5,7 +5,7 @@ region = 'us-east-1'
 ec2_client = boto3.client('ec2',region_name=region)
 ec2 = boto3.resource('ec2', region_name=region)
 
-dev_instances = ec2_client.describe_tags(Filters=[{'Name': 'tag:Enviroment', 'Values': ['Dev']}])
+dev_instances = ec2_client.describe_tags(Filters=[{'Name': 'tag:Environment', 'Values': ['Dev']}])
 running_instances = ec2_client.describe_instance_status()
 dev_instance_tags = dev_instances['Tags']
 dev_instance_Id = []
@@ -14,8 +14,10 @@ for i in dev_instance_tags:
 
 for i in dev_instances:
     if i in running_instances and dev_instances:
-        for ids in dev_instance_Id:
-            id=dev_instance_Id
+        for ids in range(len(dev_instance_Id)):
+            #print(dev_instance_Id[ids])
+            id=dev_instance_Id[ids]
+            #id=dev_instance_Id
             ec2_client.stop_instances(InstanceIds=[id])
     
 #for instances in dev_instances:
