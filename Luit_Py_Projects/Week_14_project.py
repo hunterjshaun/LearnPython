@@ -4,6 +4,7 @@ import boto3
 region = 'us-east-1'
 ec2_client = boto3.client('ec2',region_name=region)
 
+#def lambda_handler(event, context):
 dev_instances = ec2_client.describe_tags(Filters=[{'Name': 'tag:Environment', 'Values': ['Dev']}])
 
 all_running_instances = ec2_client.describe_instance_status()
