@@ -30,8 +30,3 @@ for i in dev_instance_Id:
 
 
 
-#for _ in dev_instances:
-    #if _ in all_running_instances and dev_instances:
-        #for ids in range(len(dev_instance_Id)):
-            #id=dev_instance_Id[ids]
-            #ec2_client.stop_instances(InstanceIds=[id])
