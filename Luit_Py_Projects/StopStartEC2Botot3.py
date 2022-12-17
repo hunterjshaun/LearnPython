@@ -23,9 +23,11 @@ for i in dev_instance_tags:
 print(dev_instance_Id)
 
 for i in dev_instance_Id:
-    if i in running_instance_id:
+    #if i not in running_instance_id:
+    if i in running_instance_id: 
         running_dev_Id = i
         id=running_dev_Id
+        #ec2_client.start_instances(InstanceIds=[id])
         ec2_client.stop_instances(InstanceIds=[id])
         print(running_dev_Id)
         
