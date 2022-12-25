@@ -1,6 +1,7 @@
+#Import the 'boto3' library, which is a Python SDK for interacting with AWS services
 import boto3
 
-
+#Set the region vairiable, and create the 'ec2_client' object which allows the code to interacct with the EC2 service
 region = 'us-east-1'
 ec2_client = boto3.client('ec2',region_name=region)
 
